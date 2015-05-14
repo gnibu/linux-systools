@@ -46,6 +46,6 @@ else
 	status="OK"
     fi
 fi
-mail -s "[aptitude] ($status) $(hostname) upgrade $(date)" ${admin_mail} < ${tmpfile}
+mail -s "[aptitude] ($status) $(hostname) upgrade $(date "+%y%m%d-%H%M")" ${admin_mail} < ${tmpfile}
 # Remove the temporary log file in temporary path.
 rm -f ${tmpfile}
